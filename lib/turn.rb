@@ -17,7 +17,7 @@ def spot_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  if 0 =< index && index =< 8
+  if 0 <= index && index <= 8
     !spot_taken?(board, index)
   else
     false

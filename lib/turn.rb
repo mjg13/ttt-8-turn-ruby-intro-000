@@ -8,8 +8,20 @@ def display_board(board)
   puts "-----------"
 end
 
-def valid_move?(board, index)
-  !(board[index] == "X" || board[index] == "O")
+def input_to_index(input)
+  input-1
 end
 
-#def move(board, index, token)
+def spot_taken?(board, index)
+  (board[index] == "X" || board[index] == "O")
+end
+
+def valid_move?(board, index)
+  if 0 =< index && index =< 8
+    !spot_taken?(board, index)
+  else
+    false
+  end
+end
+
+def move(board, index, token = "X")

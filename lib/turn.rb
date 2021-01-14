@@ -37,4 +37,5 @@ def turn(board)
     goodInput = valid_move?(board, index)
   end
   move(board, index)
+  display_board(board)
 end
